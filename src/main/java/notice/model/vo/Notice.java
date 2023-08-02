@@ -7,11 +7,18 @@ public class Notice {
 	private String noticeSubject;
 	private String noticeContent;
 	private String noticeWriter;
-	private Timestamp notiveDate;
+	private Timestamp noticeDate;
 	private Timestamp updateDate;
 	private int viewCount;
 
 	public Notice() {
+	}
+
+	public Notice(int noticeNo, String noticeSubject, String noticeContent) {
+		super();
+		this.noticeNo = noticeNo;
+		this.noticeSubject = noticeSubject;
+		this.noticeContent = noticeContent;
 	}
 
 	public Notice(String noticeSubject, String noticeContent) {
@@ -52,12 +59,12 @@ public class Notice {
 		this.noticeWriter = noticeWriter;
 	}
 
-	public Timestamp getNotiveDate() {
-		return notiveDate;
+	public Timestamp getNoticeDate() {
+		return noticeDate;
 	}
 
-	public void setNotiveDate(Timestamp notiveDate) {
-		this.notiveDate = notiveDate;
+	public void setNoticeDate(Timestamp notiveDate) {
+		this.noticeDate = notiveDate;
 	}
 
 	public Timestamp getUpdateDate() {
@@ -79,7 +86,7 @@ public class Notice {
 	@Override
 	public String toString() {
 		return "공지 [글번호=" + noticeNo + ", 제목=" + noticeSubject + ", 내용=" + noticeContent + ", 작성자=" + noticeWriter
-				+ ", 작성일=" + notiveDate + ", 수정일=" + updateDate + ", 조회수=" + viewCount + "]";
+				+ ", 작성일=" + noticeDate + ", 수정일=" + updateDate + ", 조회수=" + viewCount + "]";
 	}
 
 }
