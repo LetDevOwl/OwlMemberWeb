@@ -16,7 +16,7 @@
 				<ul>
 					<li>
 						<label for="member-id" >아이디</label>
-						<input type="text" id="member-id" name="member-id" value = "${member.memberId }" readonly>
+						<input type="text" id="member-id" name="member-id" value ="${member.memberId }" readonly>
 					</li>
 					<li>
 						<label for="member-pw" >비밀번호</label>
