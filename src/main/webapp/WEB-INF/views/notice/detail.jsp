@@ -15,7 +15,7 @@
 			</li>
 			<li>
 				<label>작성일</label>
-				<span>${requestScope.notice.notiveDate }</span>
+				<span>${requestScope.notice.noticeDate }</span>
 			</li>
 			<li>
 				<label>글쓴이</label>
@@ -31,7 +31,15 @@
 			</li>
 		</ul>
 		<a href="/notice/list.do">목록으로 이동</a><br>
-		<a href="#">수정하기</a><br>
-		<a href="#">삭제하기</a><br>
+		<a href="/notice/modify.do?noticeNo=${notice.noticeNo }">수정하기</a><br>
+		<a href="/notice/delete.do?noticeNo=${notice.noticeNo }">삭제하기</a><br>
+		<script>
+			const deleteCheck = () => {
+				const noticeNo = '${notice.noticeNo}';
+				if(confirm("정말로 삭제하십니까?")) {
+					location.href = "/notice/delete.do?noticeNo="+noticeNo;
+				}
+			}
+		</script>
 	</body>
 </html>
